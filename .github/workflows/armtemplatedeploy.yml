@@ -53,5 +53,5 @@ jobs:
             storageAccountName=saargus002
             location="EastUS2"
           deploymentMode: incremental
-
+#test output
       - run: echo ${{ steps.storageAccountDelpoy.outputs.BlobUri }}
