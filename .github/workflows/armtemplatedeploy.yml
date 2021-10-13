@@ -48,9 +48,10 @@ jobs:
           subscriptionId: 0716d370-926c-485b-a73a-34512d202445
           region: EastUS2
           template: ./arm-templates/storageaccount.json
-          parameters: 
-            sku=Standard_LRS
-            storageAccountName=saargus001
+          parameters:
+            ./arm-templates/storageaccount.parameters.json
+            #sku=Standard_LRS
+            storageAccountName=saargus002
             location="EastUS"
           deploymentMode: incremental
 
