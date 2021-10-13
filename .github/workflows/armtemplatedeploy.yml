@@ -41,7 +41,7 @@ jobs:
 
       - name: Deploy Storage Account
         uses: Azure/arm-deploy@v1
-        #id: storageAccountDeploy
+        id: storageAccountDeploy
         with:
           scope: resourcegroup
           resourceGroupName: rg-githubactions
@@ -49,9 +49,9 @@ jobs:
           region: EastUS2
           template: ./arm-templates/storageaccount.json
           parameters:
-            ./arm-templates/storageaccount.parameters.json
+            sku=Standard_LRS
             storageAccountName=saargus002
-            location="EastUS"
+            location="EastUS2"
           deploymentMode: incremental
 
-      #- run: echo ${{ steps.storageAccountDelpoy.outputs.BlobUri }}
+      - run: echo ${{ steps.storageAccountDelpoy.outputs.BlobUri }}

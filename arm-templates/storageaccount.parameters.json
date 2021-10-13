@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {
-            "value": "saargus001" 
+            "value": "saargus002" 
         },
         "location": {
             "value": "EastUS2" 
