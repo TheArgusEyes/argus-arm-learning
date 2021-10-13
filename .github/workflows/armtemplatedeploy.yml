@@ -50,7 +50,7 @@ jobs:
           template: ./arm-templates/storageaccount.json
           parameters: 
             sku=Standard_LRS
-            storageAccountName=saargus002
+            storageAccountName=saargus001
             location="EastUS"
           deploymentMode: incremental
 
