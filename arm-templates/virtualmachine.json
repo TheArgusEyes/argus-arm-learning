@@ -2,10 +2,10 @@
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "parameter1": {
+        "adminPassword": {
             "type": "securestring",
             "metadata": {
-                "description": "Enter the password for the admin account on this machine"
+                "description": "Enter the password for the admin account on this VM"
             }
         }
     },
@@ -83,6 +83,8 @@
                         "name": "ipConfig1",
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                            },
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'ubuntuVM1-VirtualNetwork', 'ubuntuVM1-VirtualNetwork-Subnet')]"
                             }
