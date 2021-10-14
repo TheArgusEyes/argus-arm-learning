@@ -5,9 +5,6 @@ name: armtemplatedeployment
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
-  push:
-      branches:
-        - main
   workflow_dispatch:
 
 env:
