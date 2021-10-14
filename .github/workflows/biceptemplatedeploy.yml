@@ -1,7 +1,9 @@
 name: "Bicep Deploy Workflow"
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - main
 
 env:
   subscriptionId: 0716d370-926c-485b-a73a-34512d202445
