@@ -63,6 +63,6 @@ jobs:
           region: EastUS2
           template: ./arm-templates/virtualmachine.json
           parameters:
-            adminPassword="My$ecureP@ssw0rd!"
+            adminPassword=${{ secrets.ubuntu_admin_password  }}
           deploymentMode: incremental
 
